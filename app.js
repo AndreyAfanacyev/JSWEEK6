@@ -15,10 +15,10 @@ export default (express, bodyParser, fs, crypto, http) => {
             .on('end', () => res.send(b));
         });
     })
-    .get('/login/', (req, res) => res.send('anavitbel'))   
+    .get('/login/', (req, res) => res.send('andreyafan20022202'))   
     .get('/code/', (req, res) => fs.createReadStream(import.meta.url.substring(7)).pipe(res))
     .get('/sha1/:input/', (req, res) => res.send(crypto.createHash('sha1').update(req.params.input).digest('hex')))
-    .all('/*', r => r.res.send('anavitbel'));
+    .all('/*', r => r.res.send('andreyafan20022202'));
 
     return app;
 }
